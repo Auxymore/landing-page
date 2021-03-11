@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap');
+
+html, body { 
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+	  padding: 0;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background-image: url("../images/hakan-nural-g_4t60hf4hw-unsplash.jpg");
+    background-size: cover;
+    color:white;
+    padding: 0px;
+    box-sizing: border-box;  
+}
+/* Header section */
+#header{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    background-color: black; 
+}
+
+.logo {
+    padding-left: 10%;
+}
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+header ul li {
+    display: inline;
+    padding: 0 1.4em 0 0;
+    font-size: 0.9em;
+    transition: background-position-x 0.9s linear;    
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .menu * {
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .menu li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+    overflow: hidden;
+  }
+  .menu a {
+    padding: 0.3em 0;
+    color: grey;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    text-decoration: none;
+  }
+  .menu a:before,
+  .menu a:after {
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .menu a:before {
+    bottom: 100%;
+    display: block;
+    height: 3px;
+    width: 100%;
+    content: "";
+    background-color:#e6b31e;
+  }
+  .menu a:after {
+    padding: 0.3em 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    content: attr(data-hover);
+    color: white;
+    white-space: nowrap;
+  }
+  .menu li:hover a,
+  .menu .current a {
+    transform: translateY(100%);
+  }
+
+@media screen and (min-width: 600px) {
+    #header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+    .logo {
+      margin-left: 2.3em;
+    }
+    
+    nav {
+      align-self: center;
+      margin: 0 0.8em 0 0;
+    }
+}
+
+/* Content section */
+
+.body-wrapper{
+    display: flex;
+    padding: 15% 10%;
+    text-align: left;
+
+}
+.body-wrapper h2 {
+    font-size: 46px;
+    font-weight: 300;
+    word-break: keep-all;
+}
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  .row:after {
+    flex-wrap: wrap;
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .column  {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .body-wrapper, .row {
+      flex-direction:column;
+    }
+    .body-wrapper h2 {
+      font-size: 32px;
+      font-weight: 300;
+
+    }
+    .column  {
+      width: 100%;
+    }
+  }
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0.8em 2em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+.btn:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+  }
+  .btn-1 {
+    border-color: #e6b31e;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #e6b31e 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #e6b31e 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+  }
+  .btn-1:hover {
+    background-position: 0;
+  }
+  
+/* Footer section */
+
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: black;
+  transition: top 0.3s;
+}
+#footer a {
+	padding: 1em ;
+	text-decoration: none;
+  color: grey;
+}
+#footer p {
+    font-size: 12px;
+}
+
+.social-icon{
+  font-size: 20px;
+  transition: all 0.6s ease; 
+}
+.social-icon :hover {
+  background-color: #e6b31e;
+}
